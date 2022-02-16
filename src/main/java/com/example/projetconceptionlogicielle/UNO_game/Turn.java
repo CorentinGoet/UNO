@@ -1,4 +1,4 @@
-package UNO_game;
+package com.example.projetconceptionlogicielle.UNO_game;
 
 /**
  * Classe correspondant à l'état actuel du jeu

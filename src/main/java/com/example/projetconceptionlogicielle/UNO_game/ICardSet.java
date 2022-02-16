@@ -1,4 +1,4 @@
-package UNO_game;
+package com.example.projetconceptionlogicielle.UNO_game;
 
 
 /**
@@ -6,4 +6,6 @@ package UNO_game;
  */
 public interface ICardSet {
     // TODO: Compléter l'interface
+    public int getNbCards();
+    public void SetNbCards(int nbCard);
 }
