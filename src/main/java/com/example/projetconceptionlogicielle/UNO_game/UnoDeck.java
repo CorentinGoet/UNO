@@ -43,25 +43,26 @@ public class UnoDeck implements ICardSet{
             }
             for(Value value: Value.values()){
                 Card newCard;
-                switch(value){
-                    case ZERO:
+                switch (value) {
+                    case ZERO -> {
                         // Only one card of each color with value 0
                         newCard = new Card(color, value);
                         cards.add(newCard);
                         nbCards += 1;
-                        break;
-                    case eleven, twelve, thirteen, fourteen:
+                    }
+                    case thirteen, fourteen -> {
                         // 4 cards of each special value need to be added to the deck (One with each color)
                         newCard = new Card(Color.black, value);
                         cards.add(newCard);
                         nbCards += 1;
-                        break;
-                    default:
+                    }
+                    default -> {
                         // The other cards need to be added twice
                         newCard = new Card(color, value);
                         cards.add(newCard);
                         cards.add(newCard);
                         nbCards += 2;
+                    }
                 }
 
             }
@@ -90,5 +91,9 @@ public class UnoDeck implements ICardSet{
             res += card.getValue() + " " + card.getColor() + " | ";
         }
         return res;
+    }
+
+    public ArrayList<Card> getCards() {
+        return cards;
     }
 }
