@@ -32,6 +32,8 @@ public class Card {
         thirteen{ public String toString() { return "WILDDRAW_FOUR";}},
         fourteen{ public String toString() { return "WILD";}},
     }
+
+
     // Prend une valeur entre 0 et 9
     //La valeur 10 correspond à la carte skip
     //La valeur 11 correspond à la carte reverse
