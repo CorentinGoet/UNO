@@ -34,11 +34,12 @@ public class Player {
      */
     public Card chooseCard(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Choose a card (enter a number)\n" + getHand());
+        System.out.println("Choose a card (enter -1 to draw)\n " + getHand());
         Card chosenCard;
         while(true){
             try {
                 int choice = scanner.nextInt();
+
                 chosenCard = hand.chooseCard(choice);
                 break;
             } catch (IndexOutOfBoundsException e) {
