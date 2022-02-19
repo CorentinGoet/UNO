@@ -14,9 +14,9 @@ public enum Value {
     SEVEN   { public String toString() { return "7";}},
     EIGHT   { public String toString() { return "8";}},
     NINE    { public String toString() { return "9";}},
-    ten     { public String toString() { return "SKIP";}},
-    eleven  { public String toString() { return "REVERSE";}},
-    twelve  { public String toString() { return "DRAW_TWO";}},
+    skip     { public String toString() { return "SKIP";}},
+    reverse  { public String toString() { return "REVERSE";}},
+    drawTwo  { public String toString() { return "DRAW_TWO";}},
     wildDrawFour{ public String toString() { return "WILDDRAW_FOUR";}},
     wildDraw{ public String toString() { return "WILD";}},
 }
