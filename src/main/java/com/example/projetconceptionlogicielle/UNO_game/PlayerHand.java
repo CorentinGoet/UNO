@@ -7,12 +7,16 @@ import java.util.ArrayList;
  *  Classe modélisant un ensemble de cartes correspondant à la main d'un joueur
  */
 public class PlayerHand implements ICardSet{
-    private int nbCards;
+
     private ArrayList<Card> cards;
+
+    public PlayerHand() {
+        cards = new ArrayList<>();
+    }
 
     @Override
     public int getNbCards() {
-        return nbCards;
+        return cards.size();
     }
 
     @Override
@@ -31,8 +35,8 @@ public class PlayerHand implements ICardSet{
         return chosenCard;
     }
 
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
+    public void addCard(Card card) {
+        cards.add(card);
     }
 
 }
