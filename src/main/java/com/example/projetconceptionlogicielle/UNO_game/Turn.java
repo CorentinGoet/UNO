@@ -6,10 +6,12 @@ package com.example.projetconceptionlogicielle.UNO_game;
 public class Turn {
     private Player player;
     private UnoDeck deck;
+    private Card lastPlayedCard;
 
-    public Turn(Player player, UnoDeck deck) {
+    public Turn(Player player, UnoDeck deck, Card lastPlayedCard) {
         this.player = player;
         this.deck = deck;
+        this.lastPlayedCard = lastPlayedCard;
     }
 
     public Player getPlayer() {
@@ -18,5 +20,9 @@ public class Turn {
 
     public UnoDeck getDeck() {
         return deck;
+    }
+
+    public Card getLastPlayedCard(){
+        return lastPlayedCard;
     }
 }

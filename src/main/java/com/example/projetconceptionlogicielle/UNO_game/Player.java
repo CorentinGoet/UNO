@@ -39,7 +39,7 @@ public class Player {
         while(true){
             try {
                 int choice = scanner.nextInt();
-                chosenCard = hand.getCards.get(choice);
+                chosenCard = hand.chooseCard(choice);
                 break;
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Please choose a value among your cards.");
