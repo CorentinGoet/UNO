@@ -50,7 +50,7 @@ public class UnoDeck implements ICardSet{
                         cards.add(newCard);
                         nbCards += 1;
                     }
-                    case thirteen, fourteen -> {
+                    case wildDrawFour, wildDraw -> {
                         // 4 cards of each special value need to be added to the deck (One with each color)
                         newCard = new Card(Color.black, value);
                         cards.add(newCard);
