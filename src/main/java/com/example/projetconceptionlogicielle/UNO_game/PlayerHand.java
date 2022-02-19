@@ -10,6 +10,9 @@ public class PlayerHand implements ICardSet{
 
     private ArrayList<Card> cards;
 
+    /**
+     * Constructor for class PlayerHand.
+     */
     public PlayerHand() {
         cards = new ArrayList<>();
     }
@@ -35,6 +38,10 @@ public class PlayerHand implements ICardSet{
         return chosenCard;
     }
 
+    /**
+     * Adds the given {@link Card} to the list of cards.
+     * @param card {@link Card} to be added
+     */
     public void addCard(Card card) {
         cards.add(card);
     }

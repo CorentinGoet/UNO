@@ -73,6 +73,7 @@ public class UnoDeck implements ICardSet{
 
     /**
      * Remove and return the card from the top of the deck.
+     * @return First {@link Card} of the deck
      */
     public Card draw(){
         int ind = cards.size() - 1;
@@ -93,6 +94,10 @@ public class UnoDeck implements ICardSet{
         return res;
     }
 
+    /**
+     * Returns the Card lists of the deck.
+     * @return ArrayList of {@link Card}
+     */
     public ArrayList<Card> getCards() {
         return cards;
     }

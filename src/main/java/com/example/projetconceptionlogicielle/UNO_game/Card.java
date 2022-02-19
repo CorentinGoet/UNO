@@ -7,15 +7,28 @@ public class Card {
     private Color color;
     private Value value;
 
+    /**
+     * Constructor for class Card.
+     * @param color {@link Color} of the card
+     * @param value {@link Value} of the card
+     */
     public Card(Color color, Value value) {
         this.color = color;
         this.value = value;
     }
 
+    /**
+     * Returns the {@link Color} of the Card.
+     * @return color
+     */
     public Color getColor() {
         return color;
     }
 
+    /**
+     * Returns the {@link Value} of the Card.
+     * @return value
+     */
     public Value getValue() {
         return value;
     }
