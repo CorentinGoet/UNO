@@ -22,11 +22,4 @@ public class UNO extends Application {
         launch();
     }
 
-    public EventHandler<? super MouseEvent> quitApp() throws Exception {
-        System.out.println("quit");
-        this.stop();
-
-        return null;
-    }
-
 }

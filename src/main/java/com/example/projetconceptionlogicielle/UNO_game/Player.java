@@ -9,8 +9,18 @@ import java.util.Scanner;
 public class Player {
     private PlayerHand hand;
     private int nbCards;
+    private String name;
 
     public Player() {
+        this.name = "default";
+    }
+
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public PlayerHand getHand() {
@@ -115,5 +125,18 @@ public class Player {
         for(Card card: newcards){
             hand.addCard(card);
         }
+    }
+
+    /**
+     * Checks if the player has put down all his cards
+     * @return Number of cards in the player's hand == 0
+     */
+    public boolean hasWon(){
+        return hand.getCards().size() == 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Player " + name;
     }
 }

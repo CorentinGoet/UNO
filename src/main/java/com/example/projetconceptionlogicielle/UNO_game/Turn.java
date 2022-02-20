@@ -17,13 +17,11 @@ public class Turn {
      * @param player {@link Player} who will play this turn
      * @param deck {@link UnoDeck} for the player to draw from
      * @param lastPlayedCard {@link Card} played during the last turn
-     * @param effects Special {@link Effect} caused by the previous turn
      */
-    public Turn(Player player, UnoDeck deck, Card lastPlayedCard, ArrayList<Effect> effects) {
+    public Turn(Player player, UnoDeck deck, Card lastPlayedCard) {
         this.player = player;
         this.deck = deck;
         this.lastPlayedCard = lastPlayedCard;
-        this.effects = effects;
     }
 
     /**
@@ -68,21 +66,21 @@ public class Turn {
      * - The player can draw one or several cards from the deck
      */
     public void play(){
-        boolean skipTurn;
+
         // Take into account last card
         switch(getLastPlayedCard().getValue()){
 
             case wildDrawFour -> {
                 Card wantedCard = new Card(Color.black, Value.wildDrawFour);
                 if(!player.hasCard(wantedCard)){
-                    skipTurn = true;
                     player.draw(deck.draw(4));
+                    return;
                 }
             }
             case drawTwo -> {
                 if(!player.hasCardWithValue(Value.drawTwo)){
-                    skipTurn = true;
                     player.draw(deck.draw(2));
+                    return;
                 }
             }
             default -> {
