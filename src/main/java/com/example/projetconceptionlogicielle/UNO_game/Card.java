@@ -43,4 +43,26 @@ public class Card {
                 this.getColor() == previousCard.getColor() ||
                 this.getValue() == previousCard.getValue();
     }
+
+    @Override
+    /**
+     * This redefinition of equals enables the use of built-in methods on ArrayLists of cards like Contains
+     * (see {@link Player}.hasCard)
+     */
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Card)) return false;
+
+        Card card = (Card) o;
+
+        if (getColor() != card.getColor()) return false;
+        return getValue() == card.getValue();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getValue().hashCode();
+        return result;
+    }
 }

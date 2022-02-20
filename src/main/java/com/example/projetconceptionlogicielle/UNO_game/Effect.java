@@ -6,8 +6,7 @@ package com.example.projetconceptionlogicielle.UNO_game;
 public enum Effect {
     drawTwo,
     drawFour,
-    newColor_red,
-    newColor_blue,
-    newColor_green,
-    newColor_yellow,
+    newColor {
+        public Color color;
+    },
 }

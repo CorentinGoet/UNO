@@ -49,4 +49,13 @@ public class Player {
 
         return chosenCard;
     }
+
+    /**
+     * This method checks wether the player has a specific card in his hand or not.
+     * @param wantedCard
+     * @return true if the player has the wanted card in his hand
+     */
+    public boolean hasCard(Card wantedCard){
+        return hand.getCards().contains(wantedCard);
+    }
 }

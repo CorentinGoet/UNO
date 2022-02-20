@@ -57,8 +57,29 @@ public class Turn {
      * - The player can draw one or several cards from the deck
      */
     public void play(){
-        Card nextCard;
 
+        // Take into account last card
+        switch(getLastPlayedCard().getValue()){
+            case wildDrawFour -> {
+                // TODO: Player draws 4 cards if he doesnt have a wild_draw4
+            }
+            case drawTwo -> {
+                // TODO: Player draws 2 cards if he doesnt have a draw2
+            }
+            default -> {
+                // pass
+            }
+        }
+
+        // The player puts down a card
+        while (true){
+            Card nextCard = getPlayer().chooseCard();
+            if (nextCard.isValid(getLastPlayedCard())){
+                break;
+            }else{
+                System.out.println("Please choose a valid card");
+            }
+        }
 
     }
 }
