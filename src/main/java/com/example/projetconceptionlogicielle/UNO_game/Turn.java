@@ -10,6 +10,7 @@ public class Turn {
     private UnoDeck deck;
     private Card lastPlayedCard;
     private ArrayList<Effect> effects;
+    private Card newCard;
 
     /**
      * Constructor for class Turn
@@ -50,6 +51,16 @@ public class Turn {
     }
 
     /**
+     * Returns the card played during this turn.
+     * @return {@link Card} played during the turn
+     */
+    public Card getNewCard() {
+        return newCard;
+    }
+
+
+
+    /**
      * Plays this turn.
      *
      * Depending on the card played the last time,
@@ -57,14 +68,22 @@ public class Turn {
      * - The player can draw one or several cards from the deck
      */
     public void play(){
-
+        boolean skipTurn;
         // Take into account last card
         switch(getLastPlayedCard().getValue()){
+
             case wildDrawFour -> {
-                // TODO: Player draws 4 cards if he doesnt have a wild_draw4
+                Card wantedCard = new Card(Color.black, Value.wildDrawFour);
+                if(!player.hasCard(wantedCard)){
+                    skipTurn = true;
+                    player.draw(deck.draw(4));
+                }
             }
             case drawTwo -> {
-                // TODO: Player draws 2 cards if he doesnt have a draw2
+                if(!player.hasCardWithValue(Value.drawTwo)){
+                    skipTurn = true;
+                    player.draw(deck.draw(2));
+                }
             }
             default -> {
                 // pass
@@ -72,14 +91,24 @@ public class Turn {
         }
 
         // The player puts down a card
+        Card nextCard;
         while (true){
-            Card nextCard = getPlayer().chooseCard();
+            nextCard = getPlayer().chooseCard();
             if (nextCard.isValid(getLastPlayedCard())){
                 break;
             }else{
                 System.out.println("Please choose a valid card");
             }
         }
+
+
+        // Take into account special effects
+        if(nextCard.getColor() == Color.black){
+            nextCard.setColor(player.chooseColor());
+        }
+
+        // sets the card played during the turn
+        newCard = nextCard;
 
     }
 }

@@ -83,6 +83,19 @@ public class UnoDeck implements ICardSet{
         return topCard;
     }
 
+    /**
+     * Removes and returns a specified number of cards from the top of the deck.
+     * @param number Number of {@link Card} to draw
+     * @return ArrayList of Cards drawn from the deck
+     */
+    public ArrayList<Card> draw(int number){
+        ArrayList drawnCards = new ArrayList<>();
+        for(int i=0; i<number; i++){
+            drawnCards.add(draw());
+        }
+        return drawnCards;
+    }
+
     @Override
     public String toString() {
         String res = "Uno Deck:\n";

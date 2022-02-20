@@ -26,6 +26,14 @@ public class Card {
     }
 
     /**
+     * Sets the {@link Color} of the Card to the specified value.
+     * @param color
+     */
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    /**
      * Returns the {@link Value} of the Card.
      * @return value
      */
