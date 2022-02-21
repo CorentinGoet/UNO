@@ -1,9 +1,11 @@
 package com.example.projetconceptionlogicielle.UNO_game;
 
+import javafx.scene.shape.Rectangle;
+
 /**
  * Classe modélisant une carte à jouer.
  */
-public class Card {
+public class Card extends Rectangle {
     private Color color;
     private Value value;
 
