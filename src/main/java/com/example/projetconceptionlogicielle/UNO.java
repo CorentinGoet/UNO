@@ -1,8 +1,6 @@
 package com.example.projetconceptionlogicielle;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import com.example.projetconceptionlogicielle.UNO_GUI.MenuGUI;
 

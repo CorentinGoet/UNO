@@ -1,6 +1,7 @@
 package com.example.projetconceptionlogicielle.UNO_GUI;
 
 import com.example.projetconceptionlogicielle.UNO;
+import com.example.projetconceptionlogicielle.UNO_game.Game;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -9,6 +10,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -107,6 +109,10 @@ public class MenuGUI {
      * Méthode appelée en cas d'appui sur le bouton jouer
      */
     protected void onPlayButtonClick(){
+        Game game = new Game();
+        GameGUI gameGUI = new GameGUI();
+        gameGUI.setup();
+        window.setScene(gameGUI.getScene());
 
     }
 
