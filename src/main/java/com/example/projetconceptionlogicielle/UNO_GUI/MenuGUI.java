@@ -109,6 +109,7 @@ public class MenuGUI {
      * Méthode appelée en cas d'appui sur le bouton jouer
      */
     protected void onPlayButtonClick(){
+        // TODO: Remplacer le contenu de cette méthode par l'envoi d'un évènement traité dans UNO
         Game game = new Game();
         GameGUI gameGUI = new GameGUI();
         gameGUI.setup();

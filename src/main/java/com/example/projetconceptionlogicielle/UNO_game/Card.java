@@ -1,5 +1,7 @@
 package com.example.projetconceptionlogicielle.UNO_game;
 
+import javafx.scene.image.Image;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 
 /**
@@ -17,6 +19,10 @@ public class Card extends Rectangle {
     public Card(Color color, Value value) {
         this.color = color;
         this.value = value;
+        String img_path = "/resources/com/example/projetconceptionlogicielle/img_cards/"
+                + value.toString().toLowerCase() + "_"
+                + color.toString().toLowerCase();
+        this.setFill(new ImagePattern(new Image(img_path)));
     }
 
     /**

@@ -6,3 +6,6 @@ Because this is a school project (and because the school is in France), most of 
 07/02/2022 -> 11/03/2022
 ## Objective
 This project is a UNO game with a multiplayer gameplay using the TCP protocol.
+
+## How to run
+To execute the game run the UNO class.
