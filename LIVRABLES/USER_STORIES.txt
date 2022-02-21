@@ -1,0 +1,8 @@
+Posséder une main de 7 cartes au début du jeu
+Jouer à chaque tour (sauf carte skip/reverse)
+Le joueur ne joue pas quand il pioche (sauf si pioche volontaire)
+Le joueur peut piocher
+Choisir la couleur quand on joue WildDraw/Four
+On met UNO/Contre-uno
+Le joueur gagne quand il a plus de carte
+(Ne pas finir par une carte noire)
