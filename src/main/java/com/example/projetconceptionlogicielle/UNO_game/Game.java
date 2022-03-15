@@ -1,5 +1,7 @@
 package com.example.projetconceptionlogicielle.UNO_game;
 
+import com.example.projetconceptionlogicielle.UNO_GUI.oldGameGUI;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -7,9 +9,10 @@ import java.util.Random;
  * Classe du package UNO correspondant au jeu global.
  */
 public class Game {
-    ArrayList<Player> players;
-    UnoDeck deck;
+    private ArrayList<Player> players;
+    private UnoDeck deck;
     private int rotation;
+    private oldGameGUI gameGui;
 
     /**
      * Constructor for class game
@@ -42,6 +45,7 @@ public class Game {
         nextPlayer = players.get(rd.nextInt(0, 4)); // First player is chosen randomly
         while(true){
             turn = new Turn(nextPlayer, deck, lastPlayedCard);
+            gameGui.update();
             turn.play();
 
             lastPlayedCard = turn.getNewCard();
@@ -61,6 +65,11 @@ public class Game {
     private void setup(){
         // Build the deck
         deck.buildDeck();
+
+        // Add players
+        for (int i=0; i < 4; i++){
+            addPlayer(new Player());
+        }
 
         // Give cards to the players
         for(Player player: players){
@@ -88,5 +97,13 @@ public class Game {
         playerIndex = (playerIndex + rotation) % players.size();
 
         return players.get(playerIndex);
+    }
+
+    public void setGameGui(oldGameGUI gameGui) {
+        this.gameGui = gameGui;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 }

@@ -19,10 +19,10 @@ public class Card extends Rectangle {
     public Card(Color color, Value value) {
         this.color = color;
         this.value = value;
-        String img_path = "/resources/com/example/projetconceptionlogicielle/img_cards/"
+        String img_path = "/com/example/projetconceptionlogicielle/img_cards/"
                 + value.toString().toLowerCase() + "_"
-                + color.toString().toLowerCase();
-        this.setFill(new ImagePattern(new Image(img_path)));
+                + color.toString().toLowerCase() + ".png";
+        this.setFill(new ImagePattern(new Image(getClass().getResourceAsStream(img_path))));
     }
 
     /**

@@ -13,10 +13,12 @@ public class Player {
 
     public Player() {
         this.name = "default";
+        hand = new PlayerHand();
     }
 
     public Player(String name) {
         this.name = name;
+        hand = new PlayerHand();
     }
 
     public String getName() {
