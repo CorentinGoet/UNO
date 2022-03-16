@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Graphical Interface for the Game on the client's side.
  */
-public class ClientGUI implements GameGUI{
+public class ClientGUI extends GameGUI{
 
     @Override
     public void setup(Stage stage) throws IOException {

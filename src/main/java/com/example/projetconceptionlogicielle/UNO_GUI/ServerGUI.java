@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Graphical Interface for the Game on the server's side.
  */
-public class ServerGUI implements GameGUI{
+public class ServerGUI extends GameGUI{
     public ServerGUI() {
     }
 

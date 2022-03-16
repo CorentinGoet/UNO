@@ -13,13 +13,12 @@ import java.io.IOException;
 /**
  * Graphical Interface for the main menu of the game.
  */
-public class MenuGUI implements GameGUI{
-    private Parent root;
-    private Scene scene;
-    private Stage stage;
+public class MenuGUI extends GameGUI {
+
 
 
     public MenuGUI() {
+        this.setFxmlFile("SceneBuilderResources/menuScene.fxml");
     }
 
     /**
@@ -44,20 +43,5 @@ public class MenuGUI implements GameGUI{
     @FXML
     public void quitButtonController(){
         System.out.println("Quit");
-    }
-
-    @Override
-    public void setup(Stage stage) throws IOException {
-        //this.root = FXMLLoader.load(getClass().getResource("SceneBuilderResources/menuScene.fxml"));
-        FXMLLoader loader = new FXMLLoader(UNO.class.getResource("SceneBuilderResources/menuScene.fxml"));
-        this.root = loader.load();
-        this.scene = new Scene(root);
-        this.stage = stage;
-        this.stage.setScene(scene);
-    }
-
-    @Override
-    public void show() {
-        this.stage.show();
     }
 }
