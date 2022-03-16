@@ -8,7 +8,12 @@ import java.io.IOException;
  * Graphical Interface for the Game on the server's side.
  */
 public class ServerGUI extends GameGUI{
+
+    /**
+     * Contructor for class ServerGUI
+     */
     public ServerGUI() {
+        this.setFxmlFile("SceneBuilderResources/serverScene.fxml");
     }
 
     /**
@@ -18,13 +23,4 @@ public class ServerGUI extends GameGUI{
 
     }
 
-    @Override
-    public void setup(Stage stage) throws IOException {
-
-    }
-
-    @Override
-    public void show() {
-
-    }
 }
