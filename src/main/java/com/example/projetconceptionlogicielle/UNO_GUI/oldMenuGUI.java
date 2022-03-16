@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 /**
  * Cette classe correspond à l'interface graphique du menu.
  */
-public class oldMenuGUI implements GameGUI{
+public class oldMenuGUI{
     private VBox backgroundVBox;
     private Label titleLabel;
     private Label welcomeTextLabel;
