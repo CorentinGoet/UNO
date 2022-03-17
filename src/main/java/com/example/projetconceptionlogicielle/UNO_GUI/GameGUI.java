@@ -14,12 +14,14 @@ import java.io.IOException;
 public abstract class GameGUI {
     private Parent root;
     private Scene scene;
-    private Stage stage;
     private String fxmlFile;
+    private Stage stage;
+    static Stage clientStage;
+    static Stage serverStage;
 
     /**
      * Sets up the GUI by loading the fxml file for the scene.
-     * @param stage
+     * @param stage Stage on which the scene will be added.
      */
     public void setup(Stage stage) throws IOException{
         //this.root = FXMLLoader.load(getClass().getResource("SceneBuilderResources/menuScene.fxml"));
@@ -45,10 +47,20 @@ public abstract class GameGUI {
         this.fxmlFile = fxmlFile;
     }
 
+
     /**
-     * Getter for stage object associated with the GUI.
+     * Sets the stage that will be used for the client side
+     * @param clientStage stage for the client
      */
-    public Stage getStage() {
-        return this.stage;
+    public static void setClientStage(Stage clientStage) {
+        GameGUI.clientStage = clientStage;
+    }
+
+    /**
+     * Sets the stage that will be used for the server side.
+     * @param serverStage Stage for the server
+     */
+    public static void setServerStage(Stage serverStage) {
+        GameGUI.serverStage = serverStage;
     }
 }

@@ -32,17 +32,15 @@ public class GameParametersGUI extends GameGUI {
     @FXML
     public void okButtonController(){
         System.out.println("OK button pressed");
-        ServerGUI nextGUI = new ServerGUI();
+        ServerGUI serverGUI = new ServerGUI();
 
         // check for modification
         this.nbPlayersChoiceBoxController();
 
         if(this.nbPlayersChoiceBox.getValue() != null){
             try{
-                Stage newStage = new Stage();
-                newStage.setTitle("UNO Game Server");
-                nextGUI.setup(newStage);
-                nextGUI.show();
+                serverGUI.setup(GameGUI.serverStage);
+                serverGUI.show();
             }catch(Exception e){
                 System.out.println("ERROR WHEN CREATING SERVER GUI");
                 e.printStackTrace();

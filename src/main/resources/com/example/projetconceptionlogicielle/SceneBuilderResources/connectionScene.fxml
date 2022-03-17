@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.ConnectionGUI">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="51.0" text="Connection" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="141.0" text="Server Adress" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="serverTextField" layoutX="14.0" layoutY="214.0" promptText="192.168._._" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="225.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="365.0" text="Player Name" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="325.0" />
+      <TextField fx:id="nameTextField" layoutX="13.0" layoutY="436.0" promptText="Bob" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="400.0" />
+      <Button fx:id="submitButton" layoutX="220.0" layoutY="499.0" mnemonicParsing="false" onAction="#submitButtonController" text="SUBMIT" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="50.0" layoutY="477.0" prefHeight="106.0" prefWidth="132.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="475.0" />
+   </children>
+</AnchorPane>

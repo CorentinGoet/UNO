@@ -16,7 +16,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
             <Button fx:id="startButton" mnemonicParsing="false" onAction="#startButtonController" text="START" />
-            <Button fx:id="joinButton" mnemonicParsing="false" onAction="#joinButtonController" onMouseClicked="#joinButtonController" text="JOIN" />
+            <Button fx:id="joinButton" mnemonicParsing="false" onAction="#joinButtonController" text="JOIN" />
             <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonController" onMouseClicked="#quitButtonController" text="QUIT" />
          </children>
       </HBox>
