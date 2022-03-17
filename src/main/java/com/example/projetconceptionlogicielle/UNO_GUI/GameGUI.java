@@ -44,4 +44,11 @@ public abstract class GameGUI {
     public void setFxmlFile(String fxmlFile) {
         this.fxmlFile = fxmlFile;
     }
+
+    /**
+     * Getter for stage object associated with the GUI.
+     */
+    public Stage getStage() {
+        return this.stage;
+    }
 }

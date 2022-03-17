@@ -1,8 +1,10 @@
 package com.example.projetconceptionlogicielle.UNO_GUI;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,6 +13,13 @@ import java.io.IOException;
  * Graphical Interface for the choice of parameters of the game.
  */
 public class GameParametersGUI extends GameGUI {
+    private int nbPlayer;
+    @FXML
+    private ChoiceBox nbPlayersChoiceBox;
+    @FXML
+    private void initialize(){
+        nbPlayersChoiceBox.setItems(FXCollections.observableArrayList(2, 3, 4));
+    }
 
     /**
      * Constructor for GameParameter class.
@@ -24,7 +33,23 @@ public class GameParametersGUI extends GameGUI {
      */
     @FXML
     public void okButtonController(){
-        System.out.println("OK");
+        System.out.println("OK button pressed");
+        ServerGUI nextGUI = new ServerGUI();
+
+        // check for modification
+        this.nbPlayersChoiceBoxController();
+
+        if(this.nbPlayersChoiceBox.getValue() != null){
+            try{
+                Stage newStage = new Stage();
+                newStage.setTitle("UNO Game Server");
+                nextGUI.setup(newStage);
+                nextGUI.show();
+            }catch(Exception e){
+                System.out.println("ERROR WHEN CREATING SERVER GUI");
+                e.printStackTrace();
+            }
+        }
     }
 
     /**
@@ -39,7 +64,15 @@ public class GameParametersGUI extends GameGUI {
      * Controller for the Choice Box in charge of the number of players.
      */
     @FXML
-    public void nbPlayerChoiceBoxController(){
-        System.out.println("nbPlayer Choice box");
+    public void nbPlayersChoiceBoxController(){
+        if (nbPlayersChoiceBox.getValue() != null){
+            this.nbPlayer = (int) nbPlayersChoiceBox.getValue();
+            System.out.println("nbPlayer Choice box changed to " + this.nbPlayer);
+        }
+    }
+
+    @Override
+    public void setup(Stage stage) throws IOException {
+        super.setup(stage);
     }
 }

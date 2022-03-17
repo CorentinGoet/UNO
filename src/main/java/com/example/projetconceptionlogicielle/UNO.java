@@ -11,14 +11,8 @@ public class UNO extends Application {
     @Override
     public void start(Stage mainStage) {
         MenuGUI menu = new MenuGUI();
-        GameParametersGUI param = new GameParametersGUI();
-        ServerGUI server =  new ServerGUI();
-        ClientGUI client = new ClientGUI();
-        Stage secondStage = new Stage();
         try {
-            client.setup(mainStage);
-            client.show();
-            menu.setup(secondStage);
+            menu.setup(mainStage);
             menu.show();
 
         } catch (IOException e) {

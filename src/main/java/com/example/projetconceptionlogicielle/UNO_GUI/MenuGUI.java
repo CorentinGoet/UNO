@@ -26,7 +26,16 @@ public class MenuGUI extends GameGUI {
      */
     @FXML
     public void startButtonController(){
-        System.out.println("Start");
+        System.out.println("Starting parameters interface ...");
+
+        try{
+            GameParametersGUI paramGUI = new GameParametersGUI();
+            paramGUI.setup(new Stage());
+            paramGUI.show();
+        }catch(Exception e){
+            System.out.println("ERROR WHEN CREATING PARAMETERS GUI");
+            e.printStackTrace();
+        }
     }
 
     /**

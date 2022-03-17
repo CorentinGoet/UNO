@@ -35,6 +35,6 @@ public class GameClient  {
 
     public static void main(String[] args) {
         GameClient game = new GameClient();
-        game.test();
+        game.connectToServer();
     }
 }
