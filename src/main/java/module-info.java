@@ -1,6 +1,7 @@
 module com.example.projetconceptionlogicielle {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.example.projetconceptionlogicielle.UNO_GUI to javafx.fxml;

@@ -1,6 +1,6 @@
 package com.example.projetconceptionlogicielle.UNO_GUI;
 
-import com.example.projetconceptionlogicielle.UNO_game.Game;
+import com.example.projetconceptionlogicielle.UNO_game.oldGame;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -104,7 +104,7 @@ public class oldMenuGUI{
     /**
      * Méthode appelée en cas d'appui sur le bouton jouer
      */
-    protected void onPlayButtonClick(Game game, oldGameGUI gameGUI){
+    protected void onPlayButtonClick(oldGame game, oldGameGUI gameGUI){
         gameGUI.setup();
         window.setScene(gameGUI.getScene());
         game.run();
@@ -113,7 +113,7 @@ public class oldMenuGUI{
     /**
      * Associe chaque bouton à la méthode correspondante.
      */
-    public void buttonActionSetup(Stage window, Application app, Game game, oldGameGUI gameGUI){
+    public void buttonActionSetup(Stage window, Application app, oldGame game, oldGameGUI gameGUI){
         this.window = window;
         this.app = app;
 

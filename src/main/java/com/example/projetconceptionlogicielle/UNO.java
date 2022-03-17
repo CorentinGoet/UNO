@@ -1,7 +1,6 @@
 package com.example.projetconceptionlogicielle;
 
 import com.example.projetconceptionlogicielle.UNO_GUI.*;
-import com.example.projetconceptionlogicielle.UNO_game.Game;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

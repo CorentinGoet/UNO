@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Classe du package UNO correspondant au jeu global.
  */
-public class Game {
+public class oldGame {
     private ArrayList<Player> players;
     private UnoDeck deck;
     private int rotation;
@@ -17,7 +17,7 @@ public class Game {
     /**
      * Constructor for class game
      */
-    public Game() {
+    public oldGame() {
         players = new ArrayList<>();
         deck = new UnoDeck();
     }

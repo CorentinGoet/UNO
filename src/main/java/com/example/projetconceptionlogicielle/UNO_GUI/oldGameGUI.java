@@ -1,6 +1,6 @@
 package com.example.projetconceptionlogicielle.UNO_GUI;
 
-import com.example.projetconceptionlogicielle.UNO_game.Game;
+import com.example.projetconceptionlogicielle.UNO_game.oldGame;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class oldGameGUI {
     private Scene scene;
-    private Game game;
+    private oldGame game;
     private VBox middleContainer;
     private VBox playerVBox;
     private ArrayList<Label> playerLabels;
@@ -108,7 +108,7 @@ public class oldGameGUI {
         System.out.println(cardsContainer.getChildren());
     }
 
-    public void setGame(Game game) {
+    public void setGame(oldGame game) {
         this.game = game;
     }
 }
