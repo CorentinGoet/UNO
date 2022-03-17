@@ -1,8 +1,12 @@
 package com.example.projetconceptionlogicielle.UNO_GUI;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -58,19 +62,20 @@ public class ClientGUI extends GameGUI{
      */
     @FXML
     public void deckRectangleController(){
-
-    }
-
-    /**
-     * sets up the grid pane for the player's hand by adding the correct rectangles
-     */
-    public void playerHandGridPaneSetup(){
+        middleInfoLabel.setText("deck clicked !");
 
     }
 
     @Override
     public void setup(Stage stage) throws IOException {
         super.setup(stage);
-        playerHandGridPaneSetup();
+
     }
+
+    @FXML
+    public void cardClicked(MouseEvent e){
+        Node origin = (Node) e.getSource();
+        System.out.println("card clicked " + origin.getId());
+    }
+
 }
