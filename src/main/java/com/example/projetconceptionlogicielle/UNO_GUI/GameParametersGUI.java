@@ -2,8 +2,6 @@ package com.example.projetconceptionlogicielle.UNO_GUI;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
@@ -15,7 +13,7 @@ import java.io.IOException;
 public class GameParametersGUI extends GameGUI {
     private int nbPlayer;
     @FXML
-    private ChoiceBox nbPlayersChoiceBox;
+    private ChoiceBox<Integer> nbPlayersChoiceBox;
     @FXML
     private void initialize(){
         nbPlayersChoiceBox.setItems(FXCollections.observableArrayList(2, 3, 4));
@@ -66,7 +64,7 @@ public class GameParametersGUI extends GameGUI {
     @FXML
     public void nbPlayersChoiceBoxController(){
         if (nbPlayersChoiceBox.getValue() != null){
-            this.nbPlayer = (int) nbPlayersChoiceBox.getValue();
+            this.nbPlayer = nbPlayersChoiceBox.getValue();
             System.out.println("nbPlayer Choice box changed to " + this.nbPlayer);
         }
     }
