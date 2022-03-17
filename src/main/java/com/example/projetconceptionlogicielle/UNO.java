@@ -14,9 +14,14 @@ public class UNO extends Application {
         MenuGUI menu = new MenuGUI();
         GameParametersGUI param = new GameParametersGUI();
         ServerGUI server =  new ServerGUI();
+        ClientGUI client = new ClientGUI();
+        Stage secondStage = new Stage();
         try {
-            server.setup(mainStage);
-            server.show();
+            client.setup(mainStage);
+            client.show();
+            menu.setup(secondStage);
+            menu.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
