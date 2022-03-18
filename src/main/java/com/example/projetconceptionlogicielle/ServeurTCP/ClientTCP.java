@@ -69,6 +69,15 @@ public class ClientTCP {
 		}
 	}
 
+	/**
+	 * Transmet une chaine de caractères sur la Socket, et retourne la réponse sous
+	 * la forme d'une chaine.
+	 *
+	 * Cette méthode nécessite que la connexion soit effective
+	 *
+	 * @param uneChaine
+	 * @return
+	 */
 	public String transmettreChaine(String uneChaine) {
 		String msgServeur = null;
 		try {
@@ -78,11 +87,14 @@ public class ClientTCP {
 			msgServeur = socIn.readLine();
 			System.out.println("Reponse serveur : " + msgServeur);
 
+
 		} catch (UnknownHostException e) {
 			System.err.println("Serveur inconnu : " + e);
+
 		} catch (IOException e) {
 			System.err.println("Exception entree/sortie:  " + e);
 			e.printStackTrace();
+
 		}
 		return msgServeur;
 	}
