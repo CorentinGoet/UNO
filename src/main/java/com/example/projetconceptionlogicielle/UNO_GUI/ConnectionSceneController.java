@@ -4,6 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ * Controller for the connection scene
+ */
 public class ConnectionSceneController implements IController{
     @FXML
     Label infoLabel;
