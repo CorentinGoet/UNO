@@ -37,6 +37,7 @@ public class ParametersSceneController implements IController{
         if(this.nbPlayersChoiceBox.getValue() != null){
             ServerGUI serverGUI = new ServerGUI();
             GameServer gameServer = new GameServer(serverGUI, nbPlayer);
+            gameServer.run();
 
         }
     }

@@ -45,6 +45,7 @@ public class GameServer implements IContext{
         setupTCPServers();
         this.nbPlayers = nbPlayers;
         nbConnectedPlayers = 0;
+        state = GameState.WAITING_FOR_CONNECTION;
     }
 
     /**
@@ -78,11 +79,17 @@ public class GameServer implements IContext{
      * @return index of the new player
      */
     public int addPlayer(String name){
+
+        // If the game is not in the correct state, refuse the new player
         if(state != GameState.WAITING_FOR_CONNECTION){
             return -1;
         }
+
+        // add player to the list and increment the number of connected players
         players.add(new Player(name));
         this.nbConnectedPlayers += 1;
+        run();
+        addText("New player added: " + name + ", with id: " + players.size());
         return players.size();
     }
 
@@ -101,19 +108,17 @@ public class GameServer implements IContext{
      * Runs the game server
      */
     public void run(){
-
+        System.out.println("Run called with state " + state);
         switch (state) {
             case WAITING_FOR_CONNECTION -> {
                 runWaitingForConnection();
             }
-            case GAME_START -> {
-
+            case GAME_SETUP -> {
+                System.out.println("Setup atteint");
             }
-
 
         }
 
-        connectionServer.start();
     }
 
 
@@ -125,17 +130,23 @@ public class GameServer implements IContext{
      * This method is called when the {@link GameState} is WAINTING_FOR_CONNECTION
      */
     private void runWaitingForConnection() {
-        // check if change is needed in
-        if(nbConnectedPlayers == nbPlayers){
-            state = GameState.GAME_START;
-            return;
+        if(!connectionServer.isAlive()){
+            connectionServer.start();
+
+            addText("Server entered the state: WAITING_FOR_CONNECTION");
         }
+
+        if(nbConnectedPlayers == nbPlayers){
+            state = GameState.GAME_SETUP;
+        }
+
     }
 
 
 
     /**
      * Test
+     * @deprecated
      * @param args
      */
     public static void main(String[] args) {
