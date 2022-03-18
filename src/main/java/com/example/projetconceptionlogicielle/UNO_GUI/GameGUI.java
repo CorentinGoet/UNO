@@ -16,8 +16,8 @@ public abstract class GameGUI {
     private Scene scene;
     private String fxmlFile;
     private Stage stage;
-    public static Stage clientStage;
-    static Stage serverStage;
+    private static Stage clientStage;
+    private static Stage serverStage;
     private IController controller;
 
     /**

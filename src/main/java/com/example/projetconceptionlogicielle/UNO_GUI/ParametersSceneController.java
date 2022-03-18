@@ -47,7 +47,7 @@ public class ParametersSceneController implements IController{
     @FXML
     public void backButtonController(){
         System.out.println("BACK");
-        GameGUI.serverStage.close();
+        GameGUI.getServerStage().close();
     }
 
     /**

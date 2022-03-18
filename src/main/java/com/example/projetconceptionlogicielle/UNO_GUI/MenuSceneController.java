@@ -22,7 +22,7 @@ public class MenuSceneController implements IController {
         System.out.println("Starting parameters interface ...");
         GameParametersGUI paramGUI = new GameParametersGUI();
         try{
-            paramGUI.setup(GameGUI.serverStage);
+            paramGUI.setup(GameGUI.getServerStage());
             paramGUI.show();
         }catch(Exception e){
             System.out.println("ERROR WHEN CREATING PARAMETERS GUI");
@@ -38,7 +38,7 @@ public class MenuSceneController implements IController {
         System.out.println("Starting the Connection interface ...");
         ConnectionGUI connectionGUI = new ConnectionGUI();
         try{
-            connectionGUI.setup(GameGUI.clientStage);
+            connectionGUI.setup(GameGUI.getClientStage());
             connectionGUI.show();
         }catch(Exception e){
             System.out.println("ERROR WHEN CREATING CONNECTION GUI");
@@ -52,6 +52,6 @@ public class MenuSceneController implements IController {
     @FXML
     public void quitButtonController(){
         System.out.println("Quit");
-        GameGUI.clientStage.close();
+        GameGUI.getClientStage().close();
     }
 }

@@ -45,7 +45,7 @@ public class GameClient  {
         game.connectToServer();
         ClientGUI monClientGUI= new ClientGUI();
         try {
-            monClientGUI.setup(GameGUI.clientStage);
+            monClientGUI.setup(GameGUI.getClientStage());
         } catch (IOException e) {
             e.printStackTrace();
         }
