@@ -25,6 +25,9 @@ public class ConnectionSceneController implements IController{
     public ConnectionSceneController() {
     }
 
+    /**
+     * Controller for the Submit button
+     */
     @FXML
     public void submitButtonController(){
         name = nameTextField.getText();

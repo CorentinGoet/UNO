@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Controller for the client scene.
+ */
 public class ClientSceneController implements IController{
     // Middle pane
     @FXML
@@ -60,6 +63,10 @@ public class ClientSceneController implements IController{
     }
 
 
+    /**
+     * Controller for the cards choice.
+     * @param e
+     */
     @FXML
     public void cardClicked(MouseEvent e){
         Node origin = (Node) e.getSource();
