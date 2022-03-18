@@ -5,13 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.ServerSceneController">
    <children>
       <Label fx:id="titleLabel" layoutX="54.0" layoutY="67.0" text="UNO Server">
          <font>
             <Font name="Impact" size="65.0" />
          </font>
       </Label>
-      <Label fx:id="statusLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="175.0" prefHeight="411.0" prefWidth="293.0" text="Server started" />
+      <Label fx:id="statusLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="175.0" prefHeight="333.0" prefWidth="293.0" />
+      <Button alignment="CENTER" layoutX="200.0" layoutY="476.0" mnemonicParsing="false" onAction="#quitButtonController" text="STOP" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="70.0" />
    </children>
 </AnchorPane>

@@ -18,6 +18,7 @@ public abstract class GameGUI {
     private Stage stage;
     static Stage clientStage;
     static Stage serverStage;
+    private IController controller;
 
     /**
      * Sets up the GUI by loading the fxml file for the scene.
@@ -27,6 +28,7 @@ public abstract class GameGUI {
         //this.root = FXMLLoader.load(getClass().getResource("SceneBuilderResources/menuScene.fxml"));
         FXMLLoader loader = new FXMLLoader(UNO.class.getResource(this.fxmlFile));
         this.root = loader.load();
+        this.controller = loader.getController();
         this.scene = new Scene(root);
         this.stage = stage;
         this.stage.setScene(scene);
@@ -62,5 +64,27 @@ public abstract class GameGUI {
      */
     public static void setServerStage(Stage serverStage) {
         GameGUI.serverStage = serverStage;
+    }
+
+    /**
+     * Getter for the stage containing the client side of the game.
+     */
+    public static Stage getClientStage() {
+        return clientStage;
+    }
+
+    /**
+     * Getter for the stage containing the server side of the game.
+     */
+    public static Stage getServerStage() {
+        return serverStage;
+    }
+
+    /**
+     * Getter for the controller associated with this scene.
+     * @return Controller
+     */
+    public IController getController() {
+        return controller;
     }
 }

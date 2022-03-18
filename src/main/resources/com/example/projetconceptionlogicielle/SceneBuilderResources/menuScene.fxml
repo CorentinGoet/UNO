@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="75.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.MenuGUI">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="75.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.MenuSceneController">
    <children>
       <Label fx:id="titleLabel" text="UNO">
          <font>
@@ -17,7 +17,7 @@
          <children>
             <Button fx:id="startButton" mnemonicParsing="false" onAction="#startButtonController" text="START" />
             <Button fx:id="joinButton" mnemonicParsing="false" onAction="#joinButtonController" text="JOIN" />
-            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonController" onMouseClicked="#quitButtonController" text="QUIT" />
+            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonController" text="QUIT" />
          </children>
       </HBox>
    </children>
