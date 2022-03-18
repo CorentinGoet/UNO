@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.projetconceptionlogicielle.UNO_game.GameServer</OriginalElement>
+  <nodes>
+    <node x="345.71929824561397" y="80.0">com.example.projetconceptionlogicielle.ServeurTCP.IContext</node>
+    <node x="172.32565789473682" y="0.0">com.example.projetconceptionlogicielle.UNO_game.GameServer</node>
+    <node x="168.9276315789473" y="174.0">com.example.projetconceptionlogicielle.UNO_game.Card</node>
+    <node x="0.0" y="368.0">com.example.projetconceptionlogicielle.UNO_game.Value</node>
+    <node x="145.15899122807016" y="97.0">com.example.projetconceptionlogicielle.UNO_game.UnoDeck</node>
+    <node x="107.0" y="368.0">com.example.projetconceptionlogicielle.UNO_game.Color</node>
+    <node x="257.719298245614" y="267.0">com.example.projetconceptionlogicielle.UNO_game.Player</node>
+    <node x="221.83552631578945" y="368.0">com.example.projetconceptionlogicielle.UNO_game.PlayerHand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Player" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="DEPENDENCY">
+      <point x="-30.0" y="-14.5" />
+      <point x="272.719298245614" y="245.0" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Card" target="com.example.projetconceptionlogicielle.UNO_game.Player" relationship="DEPENDENCY">
+      <point x="20.25" y="14.5" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="272.719298245614" y="245.0" />
+      <point x="-30.0" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Player" target="com.example.projetconceptionlogicielle.UNO_game.Value" relationship="DEPENDENCY">
+      <point x="-30.0" y="14.5" />
+      <point x="272.719298245614" y="317.0" />
+      <point x="147.83552631578945" y="317.0" />
+      <point x="147.83552631578945" y="337.0" />
+      <point x="47.96929824561397" y="337.0" />
+      <point x="47.96929824561397" y="347.0" />
+      <point x="65.25" y="347.0" />
+      <point x="21.75" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.PlayerHand" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="DEPENDENCY">
+      <point x="-41.66666666666666" y="-14.5" />
+      <point x="242.6688596491228" y="337.0" />
+      <point x="226.7269736842105" y="337.0" />
+      <point x="226.7269736842105" y="245.0" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Card" target="com.example.projetconceptionlogicielle.UNO_game.Color" relationship="TO_ONE">
+      <point x="-20.25" y="14.5" />
+      <point x="189.1776315789473" y="225.0" />
+      <point x="137.33552631578945" y="225.0" />
+      <point x="137.33552631578945" y="317.0" />
+      <point x="128.5" y="317.0" />
+      <point x="-21.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Player" target="com.example.projetconceptionlogicielle.UNO_game.PlayerHand" relationship="CREATE">
+      <point x="30.0" y="14.5" />
+      <point x="332.719298245614" y="317.0" />
+      <point x="326.0021929824561" y="317.0" />
+      <point x="41.66666666666663" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" target="com.example.projetconceptionlogicielle.UNO_game.Color" relationship="DEPENDENCY">
+      <point x="-36.66666666666666" y="14.5" />
+      <point x="163.4923245614035" y="142.0" />
+      <point x="100.05263157894731" y="142.0" />
+      <point x="100.05263157894731" y="152.0" />
+      <point x="158.4276315789473" y="152.0" />
+      <point x="158.4276315789473" y="337.0" />
+      <point x="156.51864035087718" y="337.0" />
+      <point x="156.51864035087718" y="347.0" />
+      <point x="171.5" y="347.0" />
+      <point x="21.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="TO_MANY">
+      <point x="0.0" y="14.5" />
+      <point x="200.15899122807016" y="142.0" />
+      <point x="189.1776315789473" y="142.0" />
+      <point x="-20.25" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameServer" target="com.example.projetconceptionlogicielle.UNO_game.Player" relationship="TO_MANY">
+      <point x="-43.0" y="14.5" />
+      <point x="193.82565789473682" y="50.0" />
+      <point x="216.07565789473682" y="50.0" />
+      <point x="216.07565789473682" y="60.0" />
+      <point x="302.219298245614" y="60.0" />
+      <point x="0.0" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameServer" target="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" relationship="CREATE">
+      <point x="0.0" y="14.5" />
+      <point x="236.82565789473682" y="50.0" />
+      <point x="226.57565789473682" y="50.0" />
+      <point x="226.57565789473682" y="70.0" />
+      <point x="227.65899122807016" y="70.0" />
+      <point x="27.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Color" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="DEPENDENCY">
+      <point x="21.5" y="-14.5" />
+      <point x="171.5" y="347.0" />
+      <point x="156.51864035087718" y="347.0" />
+      <point x="156.51864035087718" y="337.0" />
+      <point x="213.875" y="337.0" />
+      <point x="213.875" y="245.0" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Card" target="com.example.projetconceptionlogicielle.UNO_game.Color" relationship="DEPENDENCY">
+      <point x="20.25" y="14.5" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="213.875" y="245.0" />
+      <point x="213.875" y="337.0" />
+      <point x="156.51864035087718" y="337.0" />
+      <point x="156.51864035087718" y="347.0" />
+      <point x="171.5" y="347.0" />
+      <point x="21.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameServer" target="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" relationship="TO_ONE">
+      <point x="-43.0" y="14.5" />
+      <point x="193.82565789473682" y="50.0" />
+      <point x="216.07565789473682" y="50.0" />
+      <point x="216.07565789473682" y="60.0" />
+      <point x="172.65899122807016" y="60.0" />
+      <point x="-27.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameServer" target="com.example.projetconceptionlogicielle.UNO_game.Player" relationship="CREATE">
+      <point x="0.0" y="14.5" />
+      <point x="236.82565789473682" y="50.0" />
+      <point x="226.57565789473682" y="50.0" />
+      <point x="226.57565789473682" y="70.0" />
+      <point x="313.219298245614" y="70.0" />
+      <point x="313.219298245614" y="225.0" />
+      <point x="332.719298245614" y="225.0" />
+      <point x="30.0" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Card" target="com.example.projetconceptionlogicielle.UNO_game.Value" relationship="TO_ONE">
+      <point x="-20.25" y="14.5" />
+      <point x="189.1776315789473" y="225.0" />
+      <point x="137.33552631578945" y="225.0" />
+      <point x="137.33552631578945" y="235.0" />
+      <point x="30.58552631578945" y="235.0" />
+      <point x="30.58552631578945" y="317.0" />
+      <point x="21.75" y="317.0" />
+      <point x="-21.75" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Player" target="com.example.projetconceptionlogicielle.UNO_game.Color" relationship="DEPENDENCY">
+      <point x="-30.0" y="14.5" />
+      <point x="272.719298245614" y="317.0" />
+      <point x="147.83552631578945" y="317.0" />
+      <point x="147.83552631578945" y="327.0" />
+      <point x="156.51864035087718" y="327.0" />
+      <point x="156.51864035087718" y="347.0" />
+      <point x="171.5" y="347.0" />
+      <point x="21.5" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameServer" target="com.example.projetconceptionlogicielle.ServeurTCP.IContext" relationship="REALIZATION">
+      <point x="43.0" y="14.5" />
+      <point x="279.8256578947368" y="50.0" />
+      <point x="398.71929824561397" y="50.0" />
+      <point x="0.0" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="CREATE">
+      <point x="36.66666666666666" y="14.5" />
+      <point x="236.82565789473682" y="142.0" />
+      <point x="229.6776315789473" y="142.0" />
+      <point x="20.25" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.PlayerHand" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="TO_MANY">
+      <point x="0.0" y="-14.5" />
+      <point x="284.5" y="327.0" />
+      <point x="247.21929824561397" y="327.0" />
+      <point x="247.21929824561397" y="235.0" />
+      <point x="137.33552631578945" y="235.0" />
+      <point x="137.33552631578945" y="225.0" />
+      <point x="189.1776315789473" y="225.0" />
+      <point x="-20.25" y="14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.UnoDeck" target="com.example.projetconceptionlogicielle.UNO_game.Value" relationship="DEPENDENCY">
+      <point x="-36.66666666666666" y="14.5" />
+      <point x="163.4923245614035" y="142.0" />
+      <point x="100.05263157894731" y="142.0" />
+      <point x="100.05263157894731" y="152.0" />
+      <point x="41.58552631578945" y="152.0" />
+      <point x="41.58552631578945" y="317.0" />
+      <point x="47.96929824561397" y="317.0" />
+      <point x="47.96929824561397" y="347.0" />
+      <point x="65.25" y="347.0" />
+      <point x="21.75" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Player" target="com.example.projetconceptionlogicielle.UNO_game.PlayerHand" relationship="TO_ONE">
+      <point x="0.0" y="14.5" />
+      <point x="302.719298245614" y="327.0" />
+      <point x="284.5" y="327.0" />
+      <point x="0.0" y="-14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Value" target="com.example.projetconceptionlogicielle.UNO_game.Card" relationship="DEPENDENCY">
+      <point x="21.75" y="-14.5" />
+      <point x="65.25" y="347.0" />
+      <point x="47.96929824561397" y="347.0" />
+      <point x="47.96929824561397" y="317.0" />
+      <point x="41.58552631578945" y="317.0" />
+      <point x="41.58552631578945" y="245.0" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.Card" target="com.example.projetconceptionlogicielle.UNO_game.Value" relationship="DEPENDENCY">
+      <point x="20.25" y="14.5" />
+      <point x="229.6776315789473" y="245.0" />
+      <point x="41.58552631578945" y="245.0" />
+      <point x="41.58552631578945" y="317.0" />
+      <point x="47.96929824561397" y="317.0" />
+      <point x="47.96929824561397" y="347.0" />
+      <point x="65.25" y="347.0" />
+      <point x="21.75" y="-14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="215.0" y="210.5" />
+  <SelectedNodes>
+    <node>com.example.projetconceptionlogicielle.ServeurTCP.IContext</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

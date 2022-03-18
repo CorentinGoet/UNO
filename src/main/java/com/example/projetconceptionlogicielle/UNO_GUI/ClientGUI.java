@@ -35,7 +35,12 @@ public class ClientGUI extends GameGUI implements PropertyChangeListener {
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         switch(evt.getPropertyName()){
-
+            case "playerInfo" -> {
+                ((ClientSceneController) getController()).changePlayerInfoText((String) evt.getNewValue());
+            }
+            case "globalInfo" -> {
+                ((ClientSceneController) getController()).changeGlobalInfoText((String) evt.getNewValue());
+            }
         }
     }
 }

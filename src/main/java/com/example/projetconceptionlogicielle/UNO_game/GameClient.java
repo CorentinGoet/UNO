@@ -10,7 +10,6 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.IOException;
 
-
 /**
  * Class for the game client.
  * This class is part of the observer / observable design pattern implementation (observable part)
@@ -22,6 +21,7 @@ public class GameClient  {
     private Player mainPlayer;
     private final PropertyChangeSupport pcSupport;
     private String serverAddress;
+    private ClientState state;
 
     public GameClient(ClientGUI clientGUI, String name) {
         this.mainPlayer = new Player(name);
@@ -42,9 +42,23 @@ public class GameClient  {
         clientTCP.deconnecterDuServeur();
     }
 
-    public void test(){
+    /**
+     * Main method for the execution of the client.
+     */
+    public void run(){
+        switch(state){
+            case WAITING_FOR_CONNECTION -> {
+                runWaitForConnection();
+            }
+        }
 
     }
+
+    private void runWaitForConnection() {
+        changeGlobalInfo("The game is waiting for players !");
+
+    }
+
 
     public static void main(String[] args) {
         oldGame myGame = new oldGame();
@@ -66,4 +80,21 @@ public class GameClient  {
         //A ajouter les cartes, les joueurs avec leur nombre
 
     }
+
+    private void changePlayerInfo(String newText){
+        pcSupport.firePropertyChange("playerInfo", "", newText);
+    }
+
+    private void changeGlobalInfo(String newText){
+        pcSupport.firePropertyChange("globalInfo", "", newText);
+    }
+
+    /**
+     * Sends the info about the turn played to the server.
+     */
+    private void sendTurnToServer(){
+
+    }
+
+
 }

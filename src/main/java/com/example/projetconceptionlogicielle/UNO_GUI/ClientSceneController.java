@@ -62,6 +62,21 @@ public class ClientSceneController implements IController{
 
     }
 
+    /**
+     * Changes the text from the label on the bottom left of the scene.
+     * Used for info showed to this player only.
+     */
+    public void changePlayerInfoText(String newText){
+        bottomLeftInfoLabel.setText(newText);
+    }
+
+    /**
+     * Changes the text from the label on the bottom left of the scene.
+     * Used for info showed to all players.
+     */
+    public void changeGlobalInfoText(String newText){
+        bottomLeftInfoLabel.setText(newText);
+    }
 
     /**
      * Controller for the cards choice.

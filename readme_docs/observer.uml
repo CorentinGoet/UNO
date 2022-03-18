@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.projetconceptionlogicielle.UNO_game.GameClient</OriginalElement>
+  <nodes>
+    <node x="7.0" y="79.0">com.example.projetconceptionlogicielle.UNO_GUI.ClientGUI</node>
+    <node x="0.0" y="0.0">com.example.projetconceptionlogicielle.UNO_game.GameClient</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.projetconceptionlogicielle.UNO_game.GameClient" target="com.example.projetconceptionlogicielle.UNO_GUI.ClientGUI" relationship="CREATE">
+      <point x="0.0" y="14.5" />
+      <point x="0.0" y="-14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="63.0" y="54.0" />
+  <SelectedNodes>
+    <node>com.example.projetconceptionlogicielle.UNO_GUI.ClientGUI</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

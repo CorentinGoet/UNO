@@ -25,7 +25,7 @@ public class GameServer implements IContext{
     private ServeurTCP connectionServer;
     private ServeurTCP turnServer;
 
-    private GameState state;
+    private ServerState state;
 
     private final PropertyChangeSupport pcSupport;
     private String guiText;
@@ -45,7 +45,7 @@ public class GameServer implements IContext{
         setupTCPServers();
         this.nbPlayers = nbPlayers;
         nbConnectedPlayers = 0;
-        state = GameState.WAITING_FOR_CONNECTION;
+        state = ServerState.WAITING_FOR_CONNECTION;
     }
 
     /**
@@ -82,7 +82,7 @@ public class GameServer implements IContext{
     public int addPlayer(String name){
 
         // If the game is not in the correct state, refuse the new player
-        if(state != GameState.WAITING_FOR_CONNECTION){
+        if(state != ServerState.WAITING_FOR_CONNECTION){
             return -1;
         }
 
@@ -130,7 +130,7 @@ public class GameServer implements IContext{
      * This method is the servers run method while some players are not connected yet.
      *
      * This method is a part of the state design pattern implementation.
-     * This method is called when the {@link GameState} is WAINTING_FOR_CONNECTION
+     * This method is called when the {@link ServerState} is WAINTING_FOR_CONNECTION
      */
     private void runWaitingForConnection() {
         if(!connectionServer.isAlive()){
@@ -140,7 +140,7 @@ public class GameServer implements IContext{
 
 
         if(nbConnectedPlayers == nbPlayers){
-            state = GameState.GAME_SETUP;
+            state = ServerState.GAME_SETUP;
         }
 
     }

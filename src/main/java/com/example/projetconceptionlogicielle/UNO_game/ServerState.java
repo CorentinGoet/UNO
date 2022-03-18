@@ -1,6 +1,10 @@
 package com.example.projetconceptionlogicielle.UNO_game;
 
-public enum GameState {
+/**
+ * Enumeration of the different possible States for the {@link GameServer}.
+ * Part of the State Pattern implementation.
+ */
+public enum ServerState {
     /**
      * Initial state of the game, waiting for the different players to connect to the server.
      */
