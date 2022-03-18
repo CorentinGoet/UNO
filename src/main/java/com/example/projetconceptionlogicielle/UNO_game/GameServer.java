@@ -67,6 +67,7 @@ public class GameServer implements IContext{
 
     /**
      * Test constructor, should not be used for final produt
+     * @deprecated
      */
     public GameServer() {
         setupTCPServers();
@@ -89,7 +90,9 @@ public class GameServer implements IContext{
         players.add(new Player(name));
         this.nbConnectedPlayers += 1;
         run();
-        addText("New player added: " + name + ", with id: " + players.size());
+        //addText("New player added: " + name + ", with id: " + players.size());
+        // Problème de thread.
+        System.out.println("New player added: " + name + ", with id: " + players.size());
         return players.size();
     }
 
@@ -132,9 +135,9 @@ public class GameServer implements IContext{
     private void runWaitingForConnection() {
         if(!connectionServer.isAlive()){
             connectionServer.start();
-
             addText("Server entered the state: WAITING_FOR_CONNECTION");
         }
+
 
         if(nbConnectedPlayers == nbPlayers){
             state = GameState.GAME_SETUP;

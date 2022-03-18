@@ -10,6 +10,7 @@ public class Player {
     private PlayerHand hand;
     private int nbCards;
     private String name;
+    private int id;
 
     public Player() {
         this.name = "default";
@@ -140,5 +141,13 @@ public class Player {
     @Override
     public String toString() {
         return "Player " + name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

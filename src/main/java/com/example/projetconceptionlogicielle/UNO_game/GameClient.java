@@ -7,29 +7,38 @@ import javafx.stage.Stage;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.IOException;
+
 
 /**
  * Class for the game client.
  * This class is part of the observer / observable design pattern implementation (observable part)
+ * Observable for {@link ClientGUI}
  */
 public class GameClient  {
 
     private ClientTCP clientTCP;
     private Player mainPlayer;
+    private final PropertyChangeSupport pcSupport;
+    private String serverAddress;
 
-    public GameClient() {
-        this.clientTCP = new ClientTCP("localhost", 9000);
-        this.mainPlayer = new Player();
+    public GameClient(ClientGUI clientGUI, String name) {
+        this.mainPlayer = new Player(name);
+        pcSupport = new PropertyChangeSupport(this);
+        this.pcSupport.addPropertyChangeListener(clientGUI);
     }
 
     /**
      * Connects this client to the {@link GameServer} server.
      */
-    public void connectToServer(){
+    public void connectToServer(String serverAdress){
+
+        this.clientTCP = new ClientTCP(serverAdress, 9000);
         clientTCP.connecterAuServeur();
-        String retour = clientTCP.transmettreChaine("test");
-        System.out.println(retour);
+        String returnValue = clientTCP.transmettreChaine(mainPlayer.getName());
+        System.out.println("Connected to server with id " + returnValue);
+        mainPlayer.setId(Integer.parseInt(returnValue));
         clientTCP.deconnecterDuServeur();
     }
 
@@ -41,8 +50,8 @@ public class GameClient  {
         oldGame myGame = new oldGame();
         Player myPlayer = new Player();
         UnoDeck myDeck = new UnoDeck();
-        GameClient game = new GameClient();
-        game.connectToServer();
+        //GameClient game = new GameClient();
+        //game.connectToServer();
         ClientGUI monClientGUI= new ClientGUI();
         try {
             monClientGUI.setup(GameGUI.getClientStage());

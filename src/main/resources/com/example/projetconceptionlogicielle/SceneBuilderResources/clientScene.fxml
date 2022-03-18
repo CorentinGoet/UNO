@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" vgap="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.ClientSceneController">
+<GridPane alignment="CENTER" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetconceptionlogicielle.UNO_GUI.ClientSceneController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="422.0" minWidth="10.0" prefWidth="320.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="640.0" />
@@ -63,8 +64,8 @@
          <children>
             <Rectangle fx:id="card0" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
             <Rectangle fx:id="card1" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="90.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-            <Rectangle fx:id="card3" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="160.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="230.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+            <Rectangle fx:id="card2" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="160.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+            <Rectangle fx:id="card3" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="230.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
             <Rectangle fx:id="card4" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="300.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
             <Rectangle fx:id="card5" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="370.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
             <Rectangle fx:id="card6" arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="100.0" layoutX="440.0" layoutY="20.0" onMouseClicked="#cardClicked" stroke="BLACK" strokeType="INSIDE" width="70.0" />
